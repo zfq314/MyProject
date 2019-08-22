@@ -11,6 +11,7 @@
     <title>首页</title>
 </head>
 <body>
+<%--提交代码到github--%>
 <a href="jsp/login.jsp">登录页面</a><br>
 <a href="regist.jsp">注册页面</a><br>
 </body>
