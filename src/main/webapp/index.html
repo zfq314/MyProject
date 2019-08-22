@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+       $("#btn").click(function () {
+            var url = "GetEmployeeByAjax";
+            $.post(url,function (message) {
+                var str = "<tr><th>ID</th><th>LastName</th><th>Email</th><th>Salary</th><th>Dept</th><th colspan='2'>Operate</th></tr>";
+                for (var i = 0;i<message.length;i++){
+                    var emp = message[i];
+                    str+="<tr><td>"+emp.id+"</td><td>"+emp.lastName+"</td><td>"+emp.email+"</td><td>"+emp.salary+"</td><td>"+emp.dept+"</td><td><a href='#'>Edit</a></td><td><a href='#'>Delete</a></td></tr>";
+                }
+                $("table").html(str);
+            },"json");
+       });
+    });
+</script>
+<body>
+<button type="button" id="btn">通过发送ajax请求获取员工成员列表</button>
+
+<table border="1" cellpadding="10" cellspacing="0"
+       style="text-align: center;">
+</table>
+</body>
+</html>

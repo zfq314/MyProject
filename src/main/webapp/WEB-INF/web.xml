@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         id="WebApp_ID" version="2.5">
+  <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.at.guigu.servlet.LoginServlet</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>RegistServlet</servlet-name>
+    <servlet-class>com.at.guigu.servlet.RegistServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegistServlet</servlet-name>
+    <url-pattern>/RegistServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CheckUserNameServlet</servlet-name>
+    <servlet-class>com.at.guigu.servlet.CheckUserNameServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CheckUserNameServlet</servlet-name>
+    <url-pattern>/checkUsername</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>GetAllEmployeeServlet</servlet-name>
+    <servlet-class>com.at.guigu.servlet.GetAllEmployeeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetAllEmployeeServlet</servlet-name>
+    <url-pattern>/GetAllEmployeeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LogOutServlet</servlet-name>
+    <servlet-class>com.at.guigu.servlet.LogOutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogOutServlet</servlet-name>
+    <url-pattern>/LogOutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DeleteEmployeeServlet</servlet-name>
+    <servlet-class>com.at.guigu.servlet.DeleteEmployeeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteEmployeeServlet</servlet-name>
+    <url-pattern>/DeleteEmployeeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>EditEmployeeServlet</servlet-name>
+    <servlet-class>com.at.guigu.servlet.EditEmployeeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditEmployeeServlet</servlet-name>
+    <url-pattern>/EditEmployeeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SaveEmployeeServlet</servlet-name>
+    <servlet-class>com.at.guigu.servlet.SaveEmployeeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SaveEmployeeServlet</servlet-name>
+    <url-pattern>/SaveEmployeeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>EmployeeCheckName</servlet-name>
+    <servlet-class>com.at.guigu.servlet.EmployeeCheckName</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmployeeCheckName</servlet-name>
+    <url-pattern>/EmployeeCheckName</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>GetEmployeeByAjax</servlet-name>
+    <servlet-class>com.at.guigu.servlet.GetEmployeeByAjax</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetEmployeeByAjax</servlet-name>
+    <url-pattern>/GetEmployeeByAjax</url-pattern>
+  </servlet-mapping>
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>com.at.guigu.filter.LoginFilter</filter-class>
+    </filter>
+ <filter-mapping>
+     <filter-name>LoginFilter</filter-name>
+     <servlet-name>GetAllEmployeeServlet</servlet-name>
+ </filter-mapping>
+</web-app>
